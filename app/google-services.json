@@ -1,0 +1,61 @@
+{
+  "project_info": {
+    "project_number": "1078999940125",
+    "firebase_url": "https://wartube-db423.firebaseio.com",
+    "project_id": "wartube-db423",
+    "storage_bucket": "wartube-db423.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078999940125:android:8b1f13a036eb2da2",
+        "android_client_info": {
+          "package_name": "com.example.yugantar.wartube"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1078999940125-ekogu8v419mqlnecrqng51i22n2um5m3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.yugantar.wartube",
+            "certificate_hash": "113e2b98fa2846f17bd25433517daaead0713b61"
+          }
+        },
+        {
+          "client_id": "1078999940125-s28hqo3sv4u1aid2ar7597pui6qtc2n5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCY-VuDOQwKOYgi_GOnA1fp9Jn-5w2ILxQ"
+        },
+        {
+          "current_key": "AIzaSyDA8bVxqeQuRmJLf-4xlktGbi5mF42OU38"
+        },
+        {
+          "current_key": "AIzaSyBJG2YLqCaWbw40D6Uv0FlFfep2qj7wqm8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1078999940125-s28hqo3sv4u1aid2ar7597pui6qtc2n5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
