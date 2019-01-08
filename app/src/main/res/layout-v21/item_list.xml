@@ -23,7 +23,8 @@
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:padding="8dp"
-        android:id="@+id/imgIcon"/>
+        android:id="@+id/imgIcon"
+        app:srcCompat="@drawable/ic_portrait_black_24dp"/>
 
     <TextView
         android:id="@+id/txtTitle"

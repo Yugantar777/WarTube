@@ -56,10 +56,16 @@ public class ProgrammingAdapter extends RecyclerView.Adapter<ProgrammingAdapter.
         programmingViewHolder.setLikeBtn(post_key);
         StorageReference storageReference=FirebaseStorage.getInstance().getReference("profile_images");
         final FirebaseUser firebaseUser=FirebaseAuth.getInstance().getCurrentUser();
+
         storageReference.child(post.getName().trim()+".jpg").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
-                Glide.with(context).load(uri).into(programmingViewHolder.imageView);
+                if(uri!=null) {
+                    Glide.with(context).load(uri).into(programmingViewHolder.imageView);
+                }
+                else {
+                    Glide.with(context).load(R.drawable.ic_portrait_black_24dp).into(programmingViewHolder.imageView);
+                }
             }
         });
 
