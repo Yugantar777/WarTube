@@ -44,6 +44,12 @@ public class FragmentStats extends Fragment {
         sub_diff=view.findViewById(R.id.sub_diff);
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
 
+
+//                FragmentTransaction ft = getFragmentManager().beginTransaction();
+//                ft.detach(FragmentStats.this).attach(FragmentStats.this).commit();
+
+
+
        final String[] s1=new String[2];
 
         Call<Model> call=apiService.getSubscribers("statistics","PewDiePie",API_KEY);
@@ -117,7 +123,6 @@ public class FragmentStats extends Fragment {
                    public void onFailure(Call<Model> call, Throwable t) {
                    }
                });
-
 
 
 

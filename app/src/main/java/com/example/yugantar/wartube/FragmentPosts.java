@@ -38,6 +38,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.ArrayList;
 
+import java.util.Collections;
 import java.util.List;
 
 import static android.support.constraint.Constraints.TAG;
@@ -183,6 +184,8 @@ public class FragmentPosts extends Fragment {
                         Post post = postSnapshot.getValue(Post.class);
                         postList.add(post);
                     }
+
+                Collections.reverse(postList);
 
                 ProgrammingAdapter programmingAdapter = new ProgrammingAdapter(context, postList);
                 recyclerView.setAdapter(programmingAdapter);

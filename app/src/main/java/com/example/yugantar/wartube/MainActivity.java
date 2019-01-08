@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 break;
             case R.id.navigation_posts:
                {
+
                 Intent intent=new Intent(this,Login.class);
                 startActivity(intent);
                 //finish();
