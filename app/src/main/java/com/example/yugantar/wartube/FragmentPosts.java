@@ -150,6 +150,18 @@ public class FragmentPosts extends Fragment {
 
         databaseReference1 = FirebaseDatabase.getInstance().getReference("Posts");
 
+        databaseReference1.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
         editText_post = (EditText) view.findViewById(R.id.editText_post);
         postButton = (Button) view.findViewById(R.id.postButton);
         progressBar = (ProgressBar) view.findViewById(R.id.progressbar);

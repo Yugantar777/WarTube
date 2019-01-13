@@ -152,6 +152,7 @@ public class ProgrammingAdapter extends RecyclerView.Adapter<ProgrammingAdapter.
             imageView=itemView.findViewById(R.id.imgIcon);
             imagePost=itemView.findViewById(R.id.imgPost);
             thums=itemView.findViewById(R.id.thums);
+            //TODO:add comments in the posts
             comment=itemView.findViewById(R.id.postComment);
             tv=itemView.findViewById(R.id.likes);
             date=itemView.findViewById(R.id.Date);
