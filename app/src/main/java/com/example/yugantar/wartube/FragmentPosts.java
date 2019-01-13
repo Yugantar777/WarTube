@@ -11,6 +11,8 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
@@ -59,6 +61,9 @@ public class FragmentPosts extends Fragment {
     ImageView imageView,postImage,imageSelect;
     final int PICK_IMAGE=101;
     private Uri imageUri;
+    private String CHANNEL_ID = "general";
+    NotificationCompat.Builder mBuilder;
+    int notificationId = 101;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -71,6 +76,25 @@ public class FragmentPosts extends Fragment {
         postImage=view.findViewById(R.id.postImage);
         imageSelect=view.findViewById(R.id.imageSelect);
         storageReference = FirebaseStorage.getInstance().getReference("profile_images");
+
+        //Custom Notification
+        mBuilder = new NotificationCompat.Builder(context, CHANNEL_ID)
+                .setSmallIcon(R.drawable.logo)
+                .setContentTitle("War Tube")
+                .setContentText("One new Post added")
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "War Tube";
+            String description = "general";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, name, importance);
+            channel.setDescription(description);
+            // Register the channel with the system; you can't change the importance
+            // or other notification behaviors after this
+            NotificationManager notificationManager = context.getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
 
         //We need a database reference instance to read and write inside the database
         //Path is the branch of our json tree where we need to write the data
@@ -100,8 +124,7 @@ public class FragmentPosts extends Fragment {
             public void onCancelled(@NonNull DatabaseError databaseError) {
             }
         });
-
-
+        //Firebase push notification
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 
             NotificationChannel channel = new NotificationChannel("My_Notifications","My_Notifications", NotificationManager.IMPORTANCE_DEFAULT);
@@ -184,6 +207,11 @@ public class FragmentPosts extends Fragment {
                                             editText_post.setText("");
                                             progressBar.setVisibility(View.INVISIBLE);
                                             postImage.setImageResource(0);
+
+                                            NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
+
+                                            // notificationId is a unique int for each notification that you must define
+                                            notificationManager.notify(notificationId, mBuilder.build());
                                         }
                                     });
                         }
@@ -209,9 +237,6 @@ public class FragmentPosts extends Fragment {
 
         return view;
     }
-
-
-
 
     public void getdata() {
         progressBar.setVisibility(View.VISIBLE);
