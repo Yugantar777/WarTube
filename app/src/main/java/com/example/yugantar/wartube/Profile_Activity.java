@@ -73,6 +73,7 @@ public class Profile_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 progressBar.setVisibility(View.VISIBLE);
+
                 if (imageUri!=null) {
                     final StorageReference storageReference1 = storageReference.child(textName.getText().toString()+".jpg");
                              progressBar.setVisibility(View.VISIBLE);
@@ -83,7 +84,7 @@ public class Profile_Activity extends AppCompatActivity {
                                         Users users=new Users(textName.getText().toString().trim());
                                         databaseReference.setValue(users);
                                         progressBar.setVisibility(View.INVISIBLE);
-                                    Toast.makeText(Profile_Activity.this,"Successful",Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Profile_Activity.this,"Profile Updated",Toast.LENGTH_SHORT).show();
                                 }
                             })
                             .addOnCanceledListener(new OnCanceledListener() {
@@ -127,9 +128,9 @@ public class Profile_Activity extends AppCompatActivity {
         }
     }
 
-    public String getFileExtension(Uri uri){
-        ContentResolver cR=getContentResolver();
-        MimeTypeMap mime=MimeTypeMap.getSingleton();
-        return mime.getExtensionFromMimeType(cR.getType(uri));
-    }
+//    public String getFileExtension(Uri uri){
+//        ContentResolver cR=getContentResolver();
+//        MimeTypeMap mime=MimeTypeMap.getSingleton();
+//        return mime.getExtensionFromMimeType(cR.getType(uri));
+//    }
 }

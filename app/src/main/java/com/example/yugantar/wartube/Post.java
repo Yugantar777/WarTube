@@ -6,11 +6,13 @@ public class Post{
     private String post;
     private String name;
     private String id;
+    private String date;
 
-    public Post(String post, String name,String id) {
+    public Post(String post, String name,String id,String date) {
         this.post = post;
         this.name = name;
         this.id=id;
+        this.date=date;
 
     }
     public Post(){
@@ -27,6 +29,10 @@ public class Post{
 
     public String getId(){
         return id;
+    }
+
+    public String getDate(){
+        return date;
     }
 
 }

@@ -3,6 +3,7 @@ package com.example.yugantar.wartube;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -15,16 +16,24 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+
 import com.example.yugantar.wartube.activity.FragmentStats;
-import com.google.firebase.auth.FirebaseAuth;
+
 
 
 public class SecondActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener, NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
     SharedPreferences sharedPreferences;
     MainActivity obj=new MainActivity();
+    static int i = 0;
+    ImageView imageView;
+
+    String name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,12 +65,14 @@ public class SecondActivity extends AppCompatActivity implements BottomNavigatio
                         finish();
                     }
                     break;
+
                     case R.id.nav_profile:{
                         Intent intent=new Intent(SecondActivity.this,Profile_Activity.class);
                         startActivity(intent);
                         finish();
                     }
                     break;
+
                     case R.id.nav_stop:{
                         if(obj.mediaPlayer.isPlaying()) {
                             obj.mediaPlayer.pause();
@@ -72,6 +83,7 @@ public class SecondActivity extends AppCompatActivity implements BottomNavigatio
 
                     }
                     break;
+
                     case R.id.nav_play:{
                         if(!obj.mediaPlayer.isPlaying()) {
                             obj.mediaPlayer.start();
@@ -80,6 +92,14 @@ public class SecondActivity extends AppCompatActivity implements BottomNavigatio
                             Toast.makeText(SecondActivity.this,"Music is already Playing",Toast.LENGTH_SHORT).show();
                         }
                     }
+                    break;
+
+                    case R.id.nav_view:{
+                        Intent intent=new Intent(SecondActivity.this,Profile_View.class);
+                        startActivity(intent);
+                    }
+                    break;
+
 
                 }
                 drawer.closeDrawer(GravityCompat.START);
@@ -87,6 +107,7 @@ public class SecondActivity extends AppCompatActivity implements BottomNavigatio
                 return true;
             }
         });
+
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation2);
         navigation.setOnNavigationItemSelectedListener(SecondActivity.this);
@@ -96,11 +117,17 @@ public class SecondActivity extends AppCompatActivity implements BottomNavigatio
 
     }
 
+
+
     @Override
     public void onBackPressed() {
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else {
+        } else if(!drawer.isDrawerOpen(GravityCompat.START) && i<1){
+                Toast.makeText(SecondActivity.this, "Press again to exit", Toast.LENGTH_SHORT).show();
+                i++;
+                }
+                else {
             super.onBackPressed();
         }
     }
@@ -128,6 +155,7 @@ public class SecondActivity extends AppCompatActivity implements BottomNavigatio
 
         return false;
     }
+
 
 
 }

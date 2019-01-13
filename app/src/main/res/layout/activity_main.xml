@@ -8,10 +8,6 @@
     tools:context=".MainActivity"
     android:background="#ffffff">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="64dp">
 
     <FrameLayout
         android:id="@+id/frameLayout"
@@ -23,7 +19,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></FrameLayout>
 
-    </ScrollView>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"

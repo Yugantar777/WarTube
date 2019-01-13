@@ -13,7 +13,8 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashScreen">
+        <activity android:name=".SplashScreen"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,14 +22,21 @@
             </intent-filter>
         </activity>
         <activity
+            android:screenOrientation="portrait"
             android:name=".MainActivity"
             android:label="@string/title_activity_main" />
-        <activity android:name=".Login" />
-        <activity android:name=".Signup" />
+        <activity android:name=".Login"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Signup"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Profile_View"
+            android:screenOrientation="portrait"/>
         <activity
+            android:screenOrientation="portrait"
             android:name=".SecondActivity"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".Profile_Activity"></activity>
+        <activity android:name=".Profile_Activity"
+            android:screenOrientation="portrait"/>
 
 
         <service android:name=".MyMessagingService">

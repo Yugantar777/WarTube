@@ -5,8 +5,12 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_profile"
+            android:id="@+id/nav_view"
             android:icon="@drawable/profile_icon"
+            android:title="View Profile"/>
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/update_icon"
             android:title="Update Profile" />
         <item
             android:id="@+id/nav_stop"
@@ -33,10 +37,7 @@
             <!--android:title="Play Music" />-->
 
     </group>
-    <item
-        android:title="Use Play and Stop music only" />
-    <item
-        android:title="when music is playing"/>
+
 
 
 

@@ -24,14 +24,24 @@
             android:layout_height="50dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginRight="100dp"
+            android:layout_marginRight="135dp"
             android:paddingLeft="5dp"
             android:background="@drawable/background_border"
             android:hint="Post" />
 
+        <ImageView
+            android:id="@+id/imageSelect"
+            android:layout_width="50dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/postButton"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/addphoto"
+            android:maxHeight="150dp" />
+
+
         <Button
             android:id="@+id/postButton"
-            android:layout_width="80dp"
+            android:layout_width="70dp"
             android:layout_height="60dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
@@ -41,17 +51,21 @@
             android:text="Post"
             android:textColor="#ffffff" />
 
-        <!--<Button-->
-            <!--android:id="@+id/logoutButton"-->
-            <!--android:layout_width="100dp"-->
-            <!--android:layout_height="40dp"-->
-            <!--android:layout_below="@id/editText_post"-->
-            <!--android:layout_alignParentRight="true"-->
-            <!--android:layout_marginRight="20dp"-->
-            <!--android:backgroundTint="@color/design_default_color_primary"-->
-            <!--android:text="Log Out"-->
-            <!--android:textColor="#ffffff" />-->
 
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/posts_section"
+        android:id="@+id/post_image">
+
+        <ImageView
+            android:id="@+id/postImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="150dp" />
     </RelativeLayout>
 
 
@@ -61,7 +75,7 @@
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_below="@id/posts_section"
+        android:layout_below="@id/post_image"
         android:layout_marginBottom="64dp"
         android:paddingBottom="5dp"
         app:layout_constraintBottom_toBottomOf="parent"

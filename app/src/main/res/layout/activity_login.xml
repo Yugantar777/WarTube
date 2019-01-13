@@ -21,6 +21,13 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <ImageView
         android:id="@+id/image"
         android:layout_width="100dp"
@@ -113,6 +120,10 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:visibility="gone"/>
+
+    </RelativeLayout>
+    </ScrollView>
+
 
 
 </RelativeLayout>
