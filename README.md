@@ -6,28 +6,28 @@
  Cheers!!!
  
  ## Splash Screen
- <img src="https://github.com/Yugantar777/WarTube/blob/master/Images/Screenshot_20190123_230151.jpg" width="300" height="500" />
+ <img src="https://github.com/Yugantar777/WarTube/blob/master/Images/Screenshot_20190123_230151.jpg" width="250" height="600" />
  
  ## Stats Fragment
  
-  <img src="https://github.com/Yugantar777/WarTube/blob/master/Images/Screenshot_20190123_230206.jpg" width="300" height="500" />
+  <img src="https://github.com/Yugantar777/WarTube/blob/master/Images/Screenshot_20190123_230206.jpg" width="250" height="600" />
 
  ## Login Activity
  
-  <img src="https://github.com/Yugantar777/WarTube/blob/master/Images/Screenshot_20190123_230211.jpg" width="300" height="500" />
+  <img src="https://github.com/Yugantar777/WarTube/blob/master/Images/Screenshot_20190123_230211.jpg" width="250" height="600" />
 
 ## Signup Activity
 
- <img src="https://github.com/Yugantar777/WarTube/blob/master/Images/Screenshot_20190123_230217.jpg" width="300" height="500" />
+ <img src="https://github.com/Yugantar777/WarTube/blob/master/Images/Screenshot_20190123_230217.jpg" width="250" height="600" />
 
 ## Posts Fragment
 
- <img src="https://github.com/Yugantar777/WarTube/blob/master/Images/Screenshot_20190123_230256.jpg" width="300" height="500" />
+ <img src="https://github.com/Yugantar777/WarTube/blob/master/Images/Screenshot_20190123_230256.jpg" width="250" height="600" />
 
 ## Navigation Drawer
 
- <img src="https://github.com/Yugantar777/WarTube/blob/master/Images/Screenshot_20190123_230302.jpg" width="300" height="500" />
+ <img src="https://github.com/Yugantar777/WarTube/blob/master/Images/Screenshot_20190123_230302.jpg" width="250" height="600" />
 
 ## User Profile
 
- <img src="https://github.com/Yugantar777/WarTube/blob/master/Images/Screenshot_20190123_230328.jpg" width="300" height="500" />
+ <img src="https://github.com/Yugantar777/WarTube/blob/master/Images/Screenshot_20190123_230328.jpg" width="250" height="600" />
