@@ -3,7 +3,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -60,10 +60,10 @@ public class ProgrammingAdapter extends RecyclerView.Adapter<ProgrammingAdapter.
             @Override
             public void onSuccess(Uri uri) {
                 if(uri!=null) {
-                    Glide.with(context).load(uri).into(programmingViewHolder.imageView);
+                    Glide.with(context).load(uri).into(programmingViewHolder.imageView).clearOnDetach();
                 }
                 else {
-                    Glide.with(context).load(R.drawable.ic_portrait_black_24dp).into(programmingViewHolder.imageView);
+                    Glide.with(context).load(R.drawable.ic_portrait_black_24dp).into(programmingViewHolder.imageView).clearOnDetach();
                 }
             }
         });
@@ -73,12 +73,21 @@ public class ProgrammingAdapter extends RecyclerView.Adapter<ProgrammingAdapter.
             @Override
             public void onSuccess(Uri uri) {
                if(uri!=null){
-                   Glide.with(context).load(uri).into(programmingViewHolder.imagePost);
+                   Glide.with(context).load(uri).into(programmingViewHolder.imagePost).clearOnDetach();
+                   programmingViewHolder.imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
                }
+            }
+
+
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                programmingViewHolder.imagePost.setMaxHeight(0);
+                programmingViewHolder.imagePost.setImageResource(0);
             }
         });
 
-        //Setting the date on the post
+        //for the date on the post
         if(post.getDate()!=null){
             programmingViewHolder.date.setText(post.getDate());
         }
@@ -86,15 +95,8 @@ public class ProgrammingAdapter extends RecyclerView.Adapter<ProgrammingAdapter.
         mDatabaseReferenceLike=FirebaseDatabase.getInstance().getReference().child("Likes");
         mDatabaseReferenceLike.keepSynced(true);
 
-//        //setting comment on the post
-//        programmingViewHolder.imagePost.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        });
 
-        //Setting likes on the post
+        // for likes on the post
         programmingViewHolder.thums.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -123,6 +125,21 @@ public class ProgrammingAdapter extends RecyclerView.Adapter<ProgrammingAdapter.
 
                     }
                 });
+            }
+        });
+
+
+        programmingViewHolder.comment.setOnClickListener(new View.OnClickListener() {
+
+            String postId=post_key;
+            @Override
+            public void onClick(View v) {
+
+                Intent intent=new Intent(context,ThirdActivity.class);
+                intent.putExtra("PostId",postId);
+                context.startActivity(intent);
+
+
             }
         });
 

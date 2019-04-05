@@ -195,7 +195,7 @@ public class FragmentPosts extends Fragment {
 
                 //To remove the text writtrn in the edit text box
 
-                if (!TextUtils.isEmpty(post) && imageUri!=null) {
+                if (!TextUtils.isEmpty(post)) {
 
                     progressBar.setVisibility(View.VISIBLE);
                     //This is used to get the user id
@@ -226,6 +226,23 @@ public class FragmentPosts extends Fragment {
                                             notificationManager.notify(notificationId, mBuilder.build());
                                         }
                                     });
+
+
+                        }
+
+                        if(imageUri==null){
+
+                            databaseReference1.child(id).setValue(post1);
+                            Toast.makeText(context,"Post added",Toast.LENGTH_SHORT).show();
+                            editText_post.setText("");
+                            progressBar.setVisibility(View.INVISIBLE);
+                            postImage.setImageResource(0);
+
+                            NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
+
+                            // notificationId is a unique int for each notification that you must define
+                            notificationManager.notify(notificationId, mBuilder.build());
+
                         }
 
                     //Set value method is used to write the data inside the database
@@ -236,7 +253,7 @@ public class FragmentPosts extends Fragment {
 
 
                 } else {
-                    Toast.makeText(context, "Add both Text and Image in the Post", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Add both post and image", Toast.LENGTH_SHORT).show();
                     editText_post.setText("");
                     postImage.setImageResource(0);
                 }

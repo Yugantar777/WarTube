@@ -1,9 +1,7 @@
 package com.example.yugantar.wartube;
 
-
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -16,9 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -38,17 +34,17 @@ public class SecondActivity extends AppCompatActivity implements BottomNavigatio
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alternate);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         sharedPreferences=PreferenceManager.getDefaultSharedPreferences(this);
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -73,26 +69,26 @@ public class SecondActivity extends AppCompatActivity implements BottomNavigatio
                     }
                     break;
 
-                    case R.id.nav_stop:{
-                        if(obj.mediaPlayer.isPlaying()) {
-                            obj.mediaPlayer.pause();
-                        }
-                        else {
-                            Toast.makeText(SecondActivity.this, "No Music Playing", Toast.LENGTH_SHORT).show();
-                        }
-
-                    }
-                    break;
-
-                    case R.id.nav_play:{
-                        if(!obj.mediaPlayer.isPlaying()) {
-                            obj.mediaPlayer.start();
-                        }
-                        else {
-                            Toast.makeText(SecondActivity.this,"Music is already Playing",Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                    break;
+//                    case R.id.nav_stop:{
+//                        if(obj.mediaPlayer.isPlaying()) {
+//                            obj.mediaPlayer.pause();
+//                        }
+//                        else if(obj.mediaPlayer==null){
+//                            Toast.makeText(SecondActivity.this, "No Music Playing", Toast.LENGTH_SHORT).show();
+//                        }
+//
+//                    }
+//                    break;
+//
+//                    case R.id.nav_play:{
+//                        if(!obj.mediaPlayer.isPlaying()) {
+//                            obj.mediaPlayer.start();
+//                        }
+//                        else if(obj.mediaPlayer==null){
+//                            Toast.makeText(SecondActivity.this,"I/O",Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//                    break;
 
                     case R.id.nav_view:{
                         Intent intent=new Intent(SecondActivity.this,Profile_View.class);
@@ -109,7 +105,7 @@ public class SecondActivity extends AppCompatActivity implements BottomNavigatio
         });
 
 
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation2);
+        BottomNavigationView navigation = findViewById(R.id.navigation2);
         navigation.setOnNavigationItemSelectedListener(SecondActivity.this);
 
         FragmentPosts fragmentPosts = new FragmentPosts();

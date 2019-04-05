@@ -12,14 +12,14 @@
             android:id="@+id/nav_profile"
             android:icon="@drawable/update_icon"
             android:title="Update Profile" />
-        <item
-            android:id="@+id/nav_stop"
-            android:title="Stop Music"
-            android:icon="@drawable/stop_icon"/>
-        <item
-            android:id="@+id/nav_play"
-            android:title="Play Music"
-            android:icon="@drawable/play_music"/>
+        <!--<item-->
+            <!--android:id="@+id/nav_stop"-->
+            <!--android:title="Stop Music"-->
+            <!--android:icon="@drawable/stop_icon"/>-->
+        <!--<item-->
+            <!--android:id="@+id/nav_play"-->
+            <!--android:title="Play Music"-->
+            <!--android:icon="@drawable/play_music"/>-->
 
         <item
             android:id="@+id/nav_logout"
