@@ -6,28 +6,28 @@
  Cheers!!!
  
  ## Splash Screen
- <img src=" ![Screenshot_20190123_230151](https://user-images.githubusercontent.com/44875608/55591425-22d81780-5753-11e9-93fd-478a0719f5e9.jpg)" width="300" height="500" />
+ <img src="https://github.com/Yugantar777/WarTube/blob/master/Images/Screenshot_20190123_230151.jpg" width="300" height="500" />
  
  ## Stats Fragment
  
-  <img src=" ![Screenshot_20190123_230151](https://user-images.githubusercontent.com/44875608/55591425-22d81780-5753-11e9-93fd-478a0719f5e9.jpg)" width="300" height="500" />
+  <img src="https://github.com/Yugantar777/WarTube/blob/master/Images/Screenshot_20190123_230206.jpg" width="300" height="500" />
 
  ## Login Activity
  
-  <img src=" ![Screenshot_20190123_230151](https://user-images.githubusercontent.com/44875608/55591425-22d81780-5753-11e9-93fd-478a0719f5e9.jpg)" width="300" height="500" />
+  <img src="https://github.com/Yugantar777/WarTube/blob/master/Images/Screenshot_20190123_230211.jpg" width="300" height="500" />
 
 ## Signup Activity
 
- <img src=" ![Screenshot_20190123_230151](https://user-images.githubusercontent.com/44875608/55591425-22d81780-5753-11e9-93fd-478a0719f5e9.jpg)" width="300" height="500" />
+ <img src="https://github.com/Yugantar777/WarTube/blob/master/Images/Screenshot_20190123_230217.jpg" width="300" height="500" />
 
 ## Posts Fragment
 
- <img src=" ![Screenshot_20190123_230151](https://user-images.githubusercontent.com/44875608/55591425-22d81780-5753-11e9-93fd-478a0719f5e9.jpg)" width="300" height="500" />
+ <img src="https://github.com/Yugantar777/WarTube/blob/master/Images/Screenshot_20190123_230256.jpg" width="300" height="500" />
 
 ## Navigation Drawer
 
- <img src=" ![Screenshot_20190123_230151](https://user-images.githubusercontent.com/44875608/55591425-22d81780-5753-11e9-93fd-478a0719f5e9.jpg)" width="300" height="500" />
+ <img src="https://github.com/Yugantar777/WarTube/blob/master/Images/Screenshot_20190123_230302.jpg" width="300" height="500" />
 
 ## User Profile
 
- <img src=" ![Screenshot_20190123_230151](https://user-images.githubusercontent.com/44875608/55591425-22d81780-5753-11e9-93fd-478a0719f5e9.jpg)" width="300" height="500" />
+ <img src="https://github.com/Yugantar777/WarTube/blob/master/Images/Screenshot_20190123_230328.jpg" width="300" height="500" />
