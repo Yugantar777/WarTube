@@ -1,7 +1,7 @@
 
 # War Tube
 
- War Tube is an Android Application which basically shows you the difference of the subscribers between You Tube channel Tseries and PewDiePie.
+ War Tube is an Android Application which basically shows you the difference of subscribers between YouTube channels Tseries and PewDiePie.
  It also consist of a fragment where you can chat with users like you.
  Cheers!!!
  
